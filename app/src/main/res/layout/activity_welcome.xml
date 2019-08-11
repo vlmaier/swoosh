@@ -41,7 +41,7 @@
             android:textSize="24.5sp"
             app:layout_constraintTop_toBottomOf="@+id/textView" android:textStyle="bold"/>
     <TextView
-            android:text="Find a team in your city & dominate the league"
+            android:text="Find a team in your city and dominate the league"
             android:layout_width="0dp"
             android:layout_height="44dp"
             android:id="@+id/textView3" android:layout_marginTop="48dp"
