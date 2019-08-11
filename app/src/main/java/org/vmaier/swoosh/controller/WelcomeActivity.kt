@@ -1,18 +1,19 @@
-package org.vmaier.swoosh
+package org.vmaier.swoosh.controller
 
 import android.content.Intent
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_welcome.*
+import android.view.View
+import org.vmaier.swoosh.R
 
 class WelcomeActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
+    }
 
-        getStartedButton.setOnClickListener {
-            val leagueIntent = Intent(this, LeagueActivity::class.java)
-            startActivity(leagueIntent)
-        }
+    fun onGetStartedButtonClick(view: View) {
+        val leagueActivity = Intent(this, LeagueActivity::class.java)
+        startActivity(leagueActivity)
     }
 }
