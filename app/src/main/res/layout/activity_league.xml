@@ -64,7 +64,7 @@
                 android:background="@drawable/swoosh_toggle"
                 android:textOff="@string/men"
                 android:textOn="@string/men"
-                android:textAllCaps="false"/>
+                android:textAllCaps="false" android:onClick="onMenButtonClicked"/>
 
         <ToggleButton
                 android:text="@string/women"
@@ -80,7 +80,7 @@
                 android:textOff="@string/women"
                 android:textOn="@string/women"
                 android:textAllCaps="false"
-                android:textStyle="bold"/>
+                android:textStyle="bold" android:onClick="onWomenButtonClicked"/>
 
         <ToggleButton
                 android:text="@string/co_ed"
@@ -94,7 +94,7 @@
                 android:textOff="@string/co_ed"
                 android:textOn="@string/co_ed"
                 android:textAllCaps="false"
-                android:textStyle="bold"/>
+                android:textStyle="bold" android:onClick="onCoEdButtonClicked"/>
     </LinearLayout>
 
     <Button
