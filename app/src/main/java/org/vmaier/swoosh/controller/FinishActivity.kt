@@ -4,15 +4,17 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_finish.*
 import org.vmaier.swoosh.R
-import org.vmaier.swoosh.utilities.*
+import org.vmaier.swoosh.model.Player
+import org.vmaier.swoosh.utilities.EXTRA_PLAYER
 
 class FinishActivity : AppCompatActivity() {
+
+    lateinit var player: Player
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_finish)
-        val league = intent.getStringExtra(EXTRA_LEAGUE)
-        val skill = intent.getStringExtra(EXTRA_SKILL)
-        searchLeaguesText.text = "Looking for a $league $skill league near you..."
+        player = intent.getParcelableExtra(EXTRA_PLAYER)
+        searchLeaguesText.text = "Looking for a ${player.league} ${player.skill} league near you..."
     }
 }
